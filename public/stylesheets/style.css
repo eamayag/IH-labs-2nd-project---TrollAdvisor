@@ -3,6 +3,11 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
 
 a {
-  color: #00B7FF; }
+  color: #00B7FF;
+ }
 
+  .card2 {
+ width: 18rem; 
+ margin-top: 20px;
+  }
 /*# sourceMappingURL=style.css.map */
