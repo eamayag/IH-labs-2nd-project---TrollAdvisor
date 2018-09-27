@@ -28,10 +28,11 @@
     <p>{{this.reviewText}}</p>
     {{/each}} 
   <h3>Your received discounts:</h3>
+    
     {{#each dis}}
     <p id='alldiscounts'></p>
     <p>Number of guests: {{this.pax}}</p>
     <p>Percentage of discount above the total: {{this.type}}%</p>
-    <p>Message of the restaurant owner for you: "<i>{{this.message}}</i>"</p>
+    <p>Message of the restaurant owner for you: <i>{{this.message}}</i></p>
     {{/each}}
 {{/if}}
