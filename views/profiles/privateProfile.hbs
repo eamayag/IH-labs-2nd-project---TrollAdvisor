@@ -5,34 +5,50 @@
 {{#if user.isRestaurant}}
 <h3>Your info:</h3>
 <section id='restaurantinfo'>
-<img src='{{user.profilePic}}' alt='(Upload your photo in your "Edit profile section!")'>  
-<p>email: {{user.email}}</p>
-<p>Address: {{user.address}}</p>
-<p>City: {{user.city}}</p>
+  <img src='{{user.profilePic}}' alt='(Upload your photo in your "Edit profile section!")'>
+  <p>email: {{user.email}}</p>
+  <p>Address: {{user.address}}</p>
+  <p>City: {{user.city}}</p>
 </section>
 <h3>Search for a customer:</h3>
-{{#each rest}}
-<a href="publicProfile/{{_id}}">{{username}}</a> <br>
-{{/each}}
+{{!-- <a href="publicProfile/{{_id}}">{{username}}</a> <br> --}}
+<div class="container customers">
+  <div class="row">
+      {{#each rest}}
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <div class='card card2'>
+        <img class="card-img-top" src="{{this.profilePic}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{username}}</h5>
+          <p class="card-text">Bio: {{bio}}</p>
+          <a href="publicProfile/{{_id}}" class="btn btn-primary">Go to customer profile</a>
+        </div>
+      </div>
+    </div>
+      {{/each}}
+  </div>
+</div>
+
+
 
 {{else}}
 <h3>Your info:</h3>
 <section id='customerinfo'>
-<img src='{{user.profilePic}}' alt='(Upload your photo in your "Edit profile section!")'>  
-<p>email: {{user.email}}</p>
-<p>Bio: {{user.bio}}</p>
+  <img src='{{user.profilePic}}' alt='(Upload your photo in your "Edit profile section!")'>
+  <p>email: {{user.email}}</p>
+  <p>Bio: {{user.bio}}</p>
 </section>
-  <h3>Your received reviews:</h3>
-    {{#each rev}}
-    <p id='allreviews'></p>
-    <p>{{this.reviewText}}</p>
-    {{/each}} 
-  <h3>Your received discounts:</h3>
-    
-    {{#each dis}}
-    <p id='alldiscounts'></p>
-    <p>Number of guests: {{this.pax}}</p>
-    <p>Percentage of discount above the total: {{this.type}}%</p>
-    <p>Message of the restaurant owner for you: <i>{{this.message}}</i></p>
-    {{/each}}
+<h3>Your received reviews:</h3>
+{{#each rev}}
+<p id='allreviews'></p>
+<p>{{this.reviewText}}</p>
+{{/each}}
+<h3>Your received discounts:</h3>
+
+{{#each dis}}
+<p id='alldiscounts'></p>
+<p>Number of guests: {{this.pax}}</p>
+<p>Percentage of discount above the total: {{this.type}}%</p>
+<p>Message of the restaurant owner for you: <i>{{this.message}}</i></p>
+{{/each}}
 {{/if}}
