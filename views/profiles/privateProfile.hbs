@@ -6,7 +6,7 @@
 {{#if user.isRestaurant}}
    <div class="col-sm-10 col-md-10 col-lg-10">
       <div class='card card1'>
-        <img class="card-img-top" src="{{user.profilePic}}" alt='(Upload your photo in your "Edit my profile" section!)'>
+        <img class="card-img-top" src="{{user.profilePic}}" alt='(Sube una foto en la sección de "Editar mi pefil"'>
         <div class="card-body">
           <h5 class="card-title">Tu información de perfil:</h5>
           <p class="card-text">Email: {{user.email}}</p>
@@ -24,7 +24,7 @@
       {{#each rest}}
     <div class="col-sm-4 col-md-4 col-lg-4">
       <div class='card card2'>
-        <img class="card-img-top" src="{{this.profilePic}}" alt="Card image cap">
+        <img class="card-img-top" src="{{this.profilePic}}" alt="El cliente no tiene foto">
         <div class="card-body">
           <h5 class="card-title">{{username}}</h5>
           <p class="card-text">Bio: {{bio}}</p>
@@ -44,7 +44,7 @@
 
 <section id='customerinfo'>
   <div class='card card1'>
-  <img class="card-img-top" src='{{user.profilePic}}' alt='(Upload your photo in your "Edit my profile" section!)'>
+  <img class="card-img-top" src='{{user.profilePic}}' alt='(Sube una foto en la sección de "Editar mi pefil"'>
         <div class="card-body">
           <h5 class="card-title">Tu información de perfil:</h5>
   <p class="card-text">email: {{user.email}}</p>
