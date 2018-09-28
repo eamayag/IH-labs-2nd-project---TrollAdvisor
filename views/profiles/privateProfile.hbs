@@ -1,4 +1,5 @@
-<h1>Welcome to your profile, {{user.username}}!</h1>
+<h1>Hello! {{user.username}}!</h1>
+          <a href="/profile/edit/{{user._id}}" class="btn btn-primary edit">Edit my profile</a>
 
 <div class="container customers">
   <div class="row">
@@ -8,14 +9,14 @@
         <img class="card-img-top" src="{{user.profilePic}}" alt='(Upload your photo in your "Edit profile section!")'>
         <div class="card-body">
           <h5 class="card-title">Your info:</h5>
-          <p class="card-text">email: {{user.email}}</p>
+          <p class="card-text">Email: {{user.email}}</p>
           <p class="card-text">Address: {{user.address}}</p>
           <p class="card-text">City: {{user.city}}</p>
-          <a href="/profile/edit/{{user._id}}" class="btn btn-primary">Edit my profile</a>
         </div>
       </div>
     </div>
- 
+ </div>
+</div>
 <h3>Search for a customer:</h3>
 {{!-- <a href="publicProfile/{{_id}}">{{username}}</a> <br> --}}
 <div class="container customers">
@@ -37,12 +38,20 @@
 
 
 
+
 {{else}}
-<h3>Your info:</h3>
+<div class="container customers">
+  <div class="row">
+       <div class="col-sm-10 col-md-10 col-lg-10">
+
+
 <section id='customerinfo'>
-  <img src='{{user.profilePic}}' alt='(Upload your photo in your "Edit profile section!")'>
-  <p>email: {{user.email}}</p>
-  <p>Bio: {{user.bio}}</p>
+  <div class='card card1'>
+  <img class="card-img-top" src='{{user.profilePic}}' alt='(Upload your photo in your "Edit profile section!")'>
+        <div class="card-body">
+          <h5 class="card-title">Your info:</h5>
+  <p class="card-text">email: {{user.email}}</p>
+  <p class="card-text">Bio: {{user.bio}}</p>
 </section>
 <h3>Your received reviews:</h3>
 {{#each rev}}

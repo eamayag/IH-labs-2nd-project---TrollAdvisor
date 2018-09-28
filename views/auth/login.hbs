@@ -1,30 +1,35 @@
+<div id="login" class="container ">
+  <div class="row-fluid">
+    <div class="span12">
 
-<h2>Login</h2>
+      <form action="/auth/login" method="POST" id="form-container" class="form-groupL shadow p-3 mb-5 bg-white rounded">
+        <h2 class="text-login">Login</h2>
 
-<form action="/auth/login" method="POST" id="form-container">
-  <label for="username">Username</label>
-  <input id="username" type="text" name="username" placeholder="JonSnow">
+        <div class="form-group ">
+          <label for="username">Username</label>
+          <input id="username" type="text" name="username" placeholder="JonSnow" class="form-control">
+        </div>
 
-  <br><br>
 
-  <label for="password">Password</label>
-  <input id="password" type="password" name="password" placeholder="Your password">
-  <br>
-  {{#if message }}
-    <div class="error-message">{{ message }}</div>
-  {{/if}}
 
-  <br><br>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input id="password" type="password" name="password" placeholder="Your password" class="form-control">
+        </div>
+        {{#if message }}
+        <div class="error-message">{{ message }}</div>
+        {{/if}}
 
-  <a {{#if user.isRestaurant}}
-  href="/profile/privateProfile"
-  {{else}}
-  href="/profile/customerProfile"
-  {{/if}}
-  ></a><button>Log in</button>
 
-  <p class="account-message">
-    Don't have an account yet?
-  <a href="/auth/signup">Sign up</a>
-  </p>
-</form>
+
+        <a {{#if user.isRestaurant}} href="/profile/privateProfile" {{else}} href="/profile/customerProfile" {{/if}}></a><button
+          class="btn btn-primary" button type="submit">Login</button>
+
+        <p class="form-text text-muted form-group"></p>
+        Don't have an account yet?
+        <a href="/auth/signup">Signup</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>

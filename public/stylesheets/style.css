@@ -1,6 +1,12 @@
+/* @import "bourbon"; */
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+  /* padding: 50px; */
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #eee !important; }
+
+img {
+  background-size: cover;
+  height: 200px; }
 
 a {
   color: #00B7FF; }
@@ -24,5 +30,21 @@ h1, h3 {
 
 .j {
   background-color: #F0CA67 !important; }
+
+.form-groupL {
+  width: 40%; }
+
+.form-groupS {
+  width: 35%; }
+
+.form-groupE {
+  width: 45%; }
+
+.btn-primary {
+  background-color: #F0CA67 !important;
+  border-color: #F0CA67 !important; }
+
+.edit {
+  margin-left: 20px; }
 
 /*# sourceMappingURL=style.css.map */
