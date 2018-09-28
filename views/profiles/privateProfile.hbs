@@ -52,14 +52,18 @@
 </section>
 
 <div class="revanddis">
-{{#each rev}}
+{{#if rev}}
 <h3>Tus valoraciones recibidas:</h3>
+{{/if}}
+{{#each rev}}
 <p id='allreviews'></p>
 <p><i>{{this.reviewText}}</i></p>
 {{/each}}
 
-{{#each dis}}
+{{#if dis}}
 <h3>Tus descuentos recibidos:</h3>
+{{/if}}
+{{#each dis}}
 <p id='alldiscounts'></p>
 <p>Nº Invitados: {{this.pax}}; Descuento: {{this.type}}%; Mensaje del restaurante: <i>{{this.message}}</i></>
 {{/each}}

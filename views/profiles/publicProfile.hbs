@@ -35,8 +35,10 @@
 </div>
 
 <div>
-  {{#each rev}}
+  {{#if rev}}
   <h3>Valoraciones de este cliente:</h3>
+  {{/if}}
+  {{#each rev}}
   <p class='publicreviews'>"{{reviewText}}"</p>
   {{/each}} 
 </div>
