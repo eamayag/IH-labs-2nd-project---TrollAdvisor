@@ -1,6 +1,4 @@
-/* @import "bourbon"; */
 body {
-  /* padding: 50px; */
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background: #eee !important; }
 
@@ -11,6 +9,52 @@ img {
 a {
   color: #00B7FF; }
 
+h1, h3 {
+  padding: 20px;
+  text-align: center;
+  font-weight: bold; }
+
+.indexsection {
+  padding-top: 100px;
+  padding-left: 20px; }
+
+.indexa {
+  color: #6f7072; }
+
+.welcome {
+  display: inline-block;
+  text-align: center;
+  margin-left: 20vh;
+  margin-top: 10vh;
+  width: 38%;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: bold;
+  line-height: 50px;
+  font-family: "Montserrat", sans-serif;
+  color: #abb2b9; }
+
+.logo {
+  float: right;
+  margin-top: -35vh;
+  margin-right: 20vh; }
+
+.title {
+  margin-top: 40px;
+  font-size: 80px;
+  font-weight: bold;
+  font-family: sans-serif; }
+
+.login {
+  padding-top: 18vh;
+  padding-left: 20vh;
+  width: 200vh; }
+
+.signup {
+  padding-top: 18vh;
+  padding-left: 20vh;
+  width: 200vh; }
+
 .card1 img {
   width: 25%;
   margin: 0 auto;
@@ -20,10 +64,6 @@ a {
 .card1 {
   text-align: center;
   margin-left: 20%; }
-
-h1, h3 {
-  padding: 20px;
-  text-align: center; }
 
 .card2 {
   margin-bottom: 20px; }
@@ -45,6 +85,19 @@ h1, h3 {
   border-color: #F0CA67 !important; }
 
 .edit {
+  margin-left: 20px;
+  padding-top: 18vh;
+  padding-left: 20vh;
+  width: 200vh; }
+
+.editbutton {
   margin-left: 20px; }
+
+.revanddis {
+  margin-left: 22vh; }
+
+.publicrevanddis {
+  margin-left: 62vh;
+  width: 40%; }
 
 /*# sourceMappingURL=style.css.map */

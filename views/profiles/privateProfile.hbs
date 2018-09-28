@@ -1,23 +1,23 @@
-<h1>Hello! {{user.username}}!</h1>
-          <a href="/profile/edit/{{user._id}}" class="btn btn-primary edit">Edit my profile</a>
+<h1>¡Hola, {{user.username}}!</h1>
+<a href="/profile/edit/{{user._id}}" class="btn btn-primary editbutton">Editar mi perfil</a>
 
 <div class="container customers">
   <div class="row">
 {{#if user.isRestaurant}}
    <div class="col-sm-10 col-md-10 col-lg-10">
       <div class='card card1'>
-        <img class="card-img-top" src="{{user.profilePic}}" alt='(Upload your photo in your "Edit profile section!")'>
+        <img class="card-img-top" src="{{user.profilePic}}" alt='(Upload your photo in your "Edit my profile" section!)'>
         <div class="card-body">
-          <h5 class="card-title">Your info:</h5>
+          <h5 class="card-title">Tu información de perfil:</h5>
           <p class="card-text">Email: {{user.email}}</p>
-          <p class="card-text">Address: {{user.address}}</p>
-          <p class="card-text">City: {{user.city}}</p>
+          <p class="card-text">Dirección: {{user.address}}</p>
+          <p class="card-text">Ciudad: {{user.city}}</p>
         </div>
       </div>
     </div>
  </div>
 </div>
-<h3>Search for a customer:</h3>
+<h3>Busca un cliente:</h3>
 {{!-- <a href="publicProfile/{{_id}}">{{username}}</a> <br> --}}
 <div class="container customers">
   <div class="row">
@@ -28,16 +28,13 @@
         <div class="card-body">
           <h5 class="card-title">{{username}}</h5>
           <p class="card-text">Bio: {{bio}}</p>
-          <a href="publicProfile/{{_id}}" class="btn btn-primary">Go to customer profile</a>
+          <a href="publicProfile/{{_id}}" class="btn btn-primary">Ir al perfil del cliente</a>
         </div>
       </div>
     </div>
       {{/each}}
   </div>
 </div>
-
-
-
 
 {{else}}
 <div class="container customers">
@@ -47,21 +44,24 @@
 
 <section id='customerinfo'>
   <div class='card card1'>
-  <img class="card-img-top" src='{{user.profilePic}}' alt='(Upload your photo in your "Edit profile section!")'>
+  <img class="card-img-top" src='{{user.profilePic}}' alt='(Upload your photo in your "Edit my profile" section!)'>
         <div class="card-body">
-          <h5 class="card-title">Your info:</h5>
+          <h5 class="card-title">Tu información de perfil:</h5>
   <p class="card-text">email: {{user.email}}</p>
   <p class="card-text">Bio: {{user.bio}}</p>
 </section>
-<h3>Your received reviews:</h3>
+
+<div class="revanddis">
 {{#each rev}}
+<h3>Tus valoraciones recibidas:</h3>
 <p id='allreviews'></p>
 <p><i>{{this.reviewText}}</i></p>
 {{/each}}
-<h3>Your received discounts:</h3>
 
 {{#each dis}}
+<h3>Tus descuentos recibidos:</h3>
 <p id='alldiscounts'></p>
-<p>Guests: {{this.pax}}; Discount: {{this.type}}%; Message of the restaurant owner for you: <i>{{this.message}}</i></>
+<p>Nº Invitados: {{this.pax}}; Descuento: {{this.type}}%; Mensaje del restaurante: <i>{{this.message}}</i></>
 {{/each}}
-{{/if}}
+{{/if}} 
+</div>

@@ -1,10 +1,10 @@
 <div id="login" class="container ">
-  <div class="row-fluid">
+  <div class="row-fluid signup">
     <div class="span12">
        <form action="/auth/signup" method="POST" id="form-container" class="form-groupS shadow p-3 mb-5 bg-white rounded">
-        <h2>Signup</h2>
+        <h2>Regístrate</h2>
         <div class="form-group ">
-          <label for="username">Username</label>
+          <label for="username">Usuario</label>
           <input id="username" type="text" name="username" placeholder="JonSnow" class="form-control">
         </div>
         <div class="form-group ">
@@ -12,15 +12,15 @@
           <input id="email" type="email" name="email" placeholder="marcpomar@winniethepooh.com" class="form-control">
         </div>
         <div class="form-group ">
-          <label for="password">Password</label>
+          <label for="password">Contraseña</label>
           <input id="password" type="password" name="password" placeholder="********" class="form-control">
         </div>
         <div class="form-group form-check">
           <input type="radio" name="isRestaurant" value="true" class="form-check-input">
-          <label class="form-text  form-group form-check-label" for="check">Are you a restaurant owner?</label>
+          <label class="form-text  form-group form-check-label" for="check">¿Tienes un restaurante?</label>
           {{!-- <p class="form-text text-muted form-group"></p>--}}
         </div>
-        <button type="submit" class="btn btn-primary">Sign up</button>
+        <button type="submit" class="btn btn-primary">Regístrate</button>
         </form>
     </div>
   </div>

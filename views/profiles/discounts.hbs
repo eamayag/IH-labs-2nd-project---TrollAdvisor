@@ -1,19 +1,26 @@
-<h1>Assign a discount to {{user.username}}:</h1>
 
-<form action="/discounts/{{user._id}}" method="POST" id="form-container">
+<div id="login" class="container ">
+  <div class="row-fluid edit">
+    <div class="span12">
+      <form action="/discounts/{{user._id}}" method="POST" id="form-container" class="form-groupE shadow p-3 mb-5 bg-white rounded">
+        <div class="form-group">
+          <label for="type"><b>Porcentaje (%) del descuento:</b></label>
+          <input id='type' type="number" step='5' min='0' max='50' name='type' value="{{discount.type}}" class="form-control">
+        </div>
+        <div class="form-group">
 
-<label for="type">Percentage (%) of discount:</label>
-<input id='type' type="number" step='5' min='0' max='50' name='type' value="{{discount.type}}"><br><br>
+          <label for="pax"><b>Número de asistentes:</b></label>
+          <input id='pax' type="number" min='1' name='pax' value="{{discount.pax}}" class="form-control">
+        </div>
+        <div class="form-group">
 
-<label for="pax">Number of assistants</label>
-<input id='pax' type="number" min='1' name='pax' value="{{discount.pax}}" ><br><br>
+          <label for="message"><b>Incluye un mensaje para tus invitados:</b></label>
+          <input id='message' type="text" name='message' value="{{discount.message}}" class="form-control">
+        </div>
 
-<label for="message">Include a message to your guests:</label>
-<input id='message' type="text" name='message' value="{{discount.message}}"><br><br>
+        <button type="submit" class="btn btn-primary">Enviar descuento</button>
+        {{#if message }}
+        <div class="error-message">{{ message }}</div>
+        {{/if}}
 
-<button type="submit">Send discount</button>
-{{#if message }}
-<div class="error-message">{{ message }}</div>
-{{/if}}
-
-</form>
+      </form>

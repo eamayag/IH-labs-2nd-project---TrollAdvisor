@@ -10,6 +10,8 @@ const bcrypt = require("bcrypt");
 const bcryptSalt = 10
 const multer = require('multer'); //for uploading images
 const uploadCloud = require('../config/cloudinary.js');
+const cloudinaryStorage = require('multer-storage-cloudinary');
+
 
 //ir a perfil - muestra listado de clientes en rol restaurante
 router.get("/privateProfile", (req, res, next) => {

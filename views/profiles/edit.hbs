@@ -1,124 +1,44 @@
 <div id="login" class="container ">
-  <div class="row-fluid">
+  <div class="row-fluid edit">
     <div class="span12">
       <form action="/profile/edit/{{user._id}}" method="POST" id="form-container" enctype="multipart/form-data" class="form-groupE shadow p-3 mb-5 bg-white rounded">
-        <label for="profilePic">Profile Pic</label>
+        <label for="profilePic">Foto de perfil:</label>
 
         <p>{{req.user}}</p>
 
         <div class="form-group">
-          <label for="exampleFormControlFile1">Example file input</label>
-          <input type="file" class="form-control-file" id="profilePic" value="{{user.profilePic}}">
+          <label for="exampleFormControlFile1"></label>
+          <input type="file" class="form-control-file" name="profilePic" value="{{user.profilePic}}">
         </div>
 
 
         <div class="form-group ">
-          <label for="username">Username</label>
+          <label for="username">Usuario:</label>
           <input id='username' type="text" name='username' value="{{user.username}}" class="form-control">
         </div>
-        <div class="form-group ">
-          <label for="bio">Bio</label>
-          <input id='bio' type="text" name='bio' value="{{user.bio}}" class="form-control">
-        </div>
+      
 
         {{#if user.isRestaurant}}
         <div class="form-group ">
-          <label for="address">Address</label>
+          <label for="address">Dirección:</label>
           <input id='address' type="text" name='address' value="{{user.adress}}" class="form-control">
         </div>
         <div class="form-group ">
-          <label for="city">City</label>
+          <label for="city">Ciudad:</label>
           <input id='city' type="text" name='city' value="{{user.city}}" class="form-control">
         </div>
-        {{/if}}
-
-        <a href="/profiles/privateProfile"></a>
-        <button type="submit" class="btn btn-primary">Save</button>
-        {{#if message }}
-        <div class="error-message">{{ message }}</div>
-        {{/if}}
-      </form>
-    </div>
-  </div>
-</div>
-
-{{!-- <div id="login" class="container ">
-  <div class="row-fluid">
-    <div class="span12">
-
-      <form action="/auth/login" method="POST" id="form-container" class="form-groupL shadow p-3 mb-5 bg-white rounded">
-        <h2 class="text-login">Login</h2>
-
+        {{else}}
         <div class="form-group ">
-          <label for="username">Username</label>
-          <input id="username" type="text" name="username" placeholder="JonSnow" class="form-control">
+          <label for="bio">Bio:</label>
+          <input id='bio' type="text" name='bio' value="{{user.bio}}" class="form-control">
         </div>
+        {{/if}}
 
-
-
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input id="password" type="password" name="password" placeholder="Your password" class="form-control">
-        </div>
+        <button type="submit" class="btn btn-primary"></a>Guardar</button>
         {{#if message }}
         <div class="error-message">{{ message }}</div>
         {{/if}}
-
-
-
-        <a {{#if user.isRestaurant}} href="/profile/privateProfile" {{else}} href="/profile/customerProfile" {{/if}}></a>
-        <button class="btn btn-primary" button type="submit">Login</button>
-
-        <p class="form-text text-muted form-group"></p>
-        Don't have an account yet?
-        <a href="/auth/signup">Signup</a>
-        </p>
       </form>
     </div>
   </div>
 </div>
---}}
-
-{{!--
-<form action="/profile/edit/{{user._id}}" method="POST" id="form-container" enctype="multipart/form-data">
-  <div class="form-group">
-    <label for="profilePic">Profile Pic</label>
-    <p>{{req.user}}</p>
-    <input type="file" class="form-control-file" id="profilePic" name="profilePic" value="{{user.profilePic}}">
-  </div>
-
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="username">Username</label>
-      <input id='username' type="text" name='username' value="{{user.username}}">
-    </div>
-
-    <div class="form-group col-md-6">
-      {{user.email}}
-    </div>
-  </div>
-  {{#if user.isRestaurant}}
-  <div class="form-group">
-    <label for="address">Address</label>
-    <input type="text" class="form-control" id="address" placeholder="1234 Main St" value="{{user.adress}}">
-  </div>
-
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="city">City</label>
-      <input type="text" class="form-control" id="city" name='city' value="{{user.city}}">
-    </div>
-    {{/if}}
-    <div class="form-group">
-      <label for="bio">Bio</label>
-      <textarea class="form-control" id="bio" rows="3" value="{{user.bio}}"></textarea>
-    </div>
-  </div>
-
-  <button type="submit" class="btn btn-primary">Save</button>
-  {{#if message }}
-  <div class="error-message">{{ message }}</div>
-  {{/if}}
-</form>
-<a href="/profiles/privateProfile"></a>
---}}

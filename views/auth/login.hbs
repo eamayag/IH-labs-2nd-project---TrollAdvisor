@@ -1,20 +1,20 @@
-<div id="login" class="container ">
-  <div class="row-fluid">
+<div id="login" class="container">
+  <div class="row-fluid login">
     <div class="span12">
 
       <form action="/auth/login" method="POST" id="form-container" class="form-groupL shadow p-3 mb-5 bg-white rounded">
-        <h2 class="text-login">Login</h2>
+        <h2 class="text-login">Iniciar sesión</h2>
 
         <div class="form-group ">
-          <label for="username">Username</label>
+          <label for="username">Usuario</label>
           <input id="username" type="text" name="username" placeholder="JonSnow" class="form-control">
         </div>
 
 
 
         <div class="form-group">
-          <label for="password">Password</label>
-          <input id="password" type="password" name="password" placeholder="Your password" class="form-control">
+          <label for="password">Contraseña</label>
+          <input id="password" type="password" name="password" placeholder="Contraseña" class="form-control">
         </div>
         {{#if message }}
         <div class="error-message">{{ message }}</div>
@@ -23,11 +23,11 @@
 
 
         <a {{#if user.isRestaurant}} href="/profile/privateProfile" {{else}} href="/profile/customerProfile" {{/if}}></a><button
-          class="btn btn-primary" button type="submit">Login</button>
+          class="btn btn-primary" button type="submit">Iniciar sesión</button>
 
         <p class="form-text text-muted form-group"></p>
-        Don't have an account yet?
-        <a href="/auth/signup">Signup</a>
+        ¿No eres usuario aún?
+        <a href="/auth/signup">Regístrate</a>
         </p>
       </form>
     </div>
