@@ -1,6 +1,7 @@
 Second proyect at Ironhack Web development bootcamp, after 4 weeks of learning. 
 
 DEVELOPED: MongoDB, Express, Node.js. 
+
 Temporary deployed: http://trolladvisor.herokuapp.com/
 
 ###TROLL ADVISOR:
