@@ -4,12 +4,15 @@
 
 **Temporary deployed**: [TrollAdvisor in Heroku](http://trolladvisor.herokuapp.com/)
 
+---
+
 ## TROLL ADVISOR:
 
 A review web TripAdvisor style, but now for restaurants (Black Mirror style!). 
 Annoying clients? Now you can share opinions about them, avoid having misseducated customers 
 and give discounts to those you want to go to your place. 
 
+---
 ### INSTRUCTIONS: 
 
 Two types of profiles are considered: 
