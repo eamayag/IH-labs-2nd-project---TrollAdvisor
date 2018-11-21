@@ -4,6 +4,8 @@
 
 **Temporary deployed**: [TrollAdvisor in Heroku](http://trolladvisor.herokuapp.com/)
 
+**Team**: [Rubén Armendáriz](https://github.com/rubenarmendariz)
+
 ---
 
 ## TROLL ADVISOR:
